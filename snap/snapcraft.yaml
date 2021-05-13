@@ -1,0 +1,19 @@
+name: test-nbs
+base: core20
+version: '0.1'
+summary: Test for no brand store images
+description: |
+  Boilerplate.
+
+grade: stable
+confinement: strict
+
+apps:
+  ip:
+    command: bin/ip.sh
+    plugs: [ network-control ]
+
+parts:
+  launchers:
+    source: launchers
+    plugin: dump
